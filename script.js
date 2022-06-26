@@ -10,6 +10,7 @@ const botChoiceImg = document.querySelector('.bot')
 const msgContainer = document.querySelector('.messageContainer')
 const winningMessage = document.querySelector('#winningMessage')
 const restartBtn = document.querySelector('#restartGame')
+const choose = document.querySelector('.beforeXc')
 
 //function for bot
 function botChooseHere(){
@@ -47,9 +48,11 @@ images.forEach(items => {
         //and finally we decide the winner
         winnerDecider(itemsName)
 
+        //Hiding choose one image when we choose one
+        choose.classList.add('hideMe')
+
         //displaying winning message
         setInterval(displayWinMsg, 1000)
-
 });
 
 
